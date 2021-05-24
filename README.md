@@ -1,3 +1,3 @@
 # Portfolio
  
-![Começo](https://github.com/AlexDeSaran/Portfolio/blob/main/Imagens/Capturar.PNG)
+![Começo](https://github.com/AlexDeSaran/Portfolio/blob/main/assets/img/Capturar.PNG)
