@@ -1,6 +1,3 @@
-# Portfolio
- Aqui está um exemplo de como o arquivo README.md pode ser gerado para o projeto web desenvolvido na disciplina de Web 1 da UTFPR-CP:
-
 # Projeto Web - Disciplina de Web 1
 
 Este é o projeto desenvolvido para a disciplina de Web 1 na UTFPR-CP. O projeto consiste em um website utilizando tecnologias web modernas.
