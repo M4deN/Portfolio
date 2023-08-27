@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 .back-to-top:hover {
   color: #fff;
   background: #2eafec;
-  transition: background 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 /*--------
@@ -231,8 +231,7 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(255, 251, 251);
 }
 
-#hero p {
-  
+#hero p {  
   color: #fff;
   margin-bottom: 50px;
   font-size: 26px;
@@ -378,13 +377,11 @@ section {
   transition: ease-in-out 0.3s;
 }
 
-.facts .count-box a:hover {
-  color: #1f5297;
-}
 
 /*--------------------------
 # habilidades
 ---------------------------*/
+/* Estilos para o modo claro */
 .skills .progress {
   height: 50px;
   display: block;
@@ -398,7 +395,7 @@ section {
   display: block;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #050d18;
+  color: #122f57;
 }
 
 .skills .progress .skill .val {
@@ -413,7 +410,7 @@ section {
 .skills .progress-bar {
   width: 1px;
   height: 10px;
-  transition: .9s;
+  transition: 0.9s;
   background-color: #149ddd;
 }
 
@@ -427,7 +424,6 @@ section {
   margin-bottom: 20px;
   color: #050d18;
 }
-
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
@@ -447,7 +443,7 @@ section {
 
 .resume .resume-item h5 {
   font-size: 16px;
-  background: #e4edf9;
+  background: #c8cbd1;
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
@@ -633,7 +629,7 @@ section {
 }
 
 /*----------------------
-# Testemunhos/ trabalhos
+# Projects
 ----------------------*/
 .testimonials .testimonial-item {
   box-sizing: content-box;
@@ -687,7 +683,7 @@ section {
   position: relative;
   margin-bottom: 35px;
   border-radius: 6px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 15px rgba(110, 107, 107, 0.438);
 }
 
 .testimonials .testimonial-item p::after {
@@ -723,188 +719,6 @@ section {
 @media (max-width: 767px) {
   .testimonials {
     margin: 30px 10px;
-  }
-}
-
-/*---------------
-# Contato
----------------*/
-.contact {
-  padding-bottom: 130px;
-}
-
-.contact .info {
-  padding: 30px;
-  background: #fff;
-  width: 100%;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
-}
-
-.contact .info i {
-  font-size: 20px;
-  color: #149ddd;
-  float: left;
-  width: 44px;
-  height: 44px;
-  background: #dff3fc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
-}
-
-.contact .info h4 {
-  padding: 0 0 0 60px;
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: #050d18;
-}
-
-.contact .info p {
-  padding: 0 0 10px 60px;
-  margin-bottom: 20px;
-  font-size: 14px;
-  color: #173b6c;
-}
-
-.contact .info .email p {
-  padding-top: 5px;
-}
-
-.contact .info .social-links {
-  padding-left: 60px;
-}
-
-.contact .info .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: #333;
-  color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-  margin-right: 10px;
-}
-
-.contact .info .social-links a:hover {
-  background: #149ddd;
-  color: #fff;
-}
-
-.contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
-  background: #149ddd;
-  color: #fff;
-}
-
-.contact .php-email-form {
-  width: 100%;
-  padding: 30px;
-  background: #fff;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
-}
-
-.contact .php-email-form .form-group {
-  padding-bottom: 8px;
-}
-
-.contact .php-email-form .validate {
-  display: none;
-  color: red;
-  margin: 0 0 15px 0;
-  font-weight: 400;
-  font-size: 13px;
-}
-
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .error-message br + br {
-  margin-top: 25px;
-}
-
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form input, .contact .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-}
-
-.contact .php-email-form input {
-  height: 44px;
-}
-
-.contact .php-email-form textarea {
-  padding: 10px 12px;
-}
-
-.contact .php-email-form button[type="submit"] {
-  background: #149ddd;
-  border: 0;
-  padding: 10px 24px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 4px;
-}
-
-.contact .php-email-form button[type="submit"]:hover {
-  background: #37b3ed;
-}
-
-@-webkit-keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
 
@@ -960,6 +774,124 @@ section {
   padding-top: 40px;
 }
 
+/*----------------------
+# DarkMode
+----------------------*/
+.dark-mode {
+  background-color: #161616; 
+  color: #fff; 
+}
+.dark-mode-toggle:hover {
+  animation: glow 1s infinite alternate;
+}
+
+/* Animação glow para o efeito hover */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+  }
+  to {
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+  }
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #161616;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.bx.bx-moon.dark-mode-toggle {
+  font-size: 28px; 
+  color: black;
+}
+.dark-mode .facts {
+  background-color: #161616; 
+  color: #ffffff; 
+}
+.dark-mode .cv-description {
+  color: white;
+}
+
+.dark-mode-ativo #facts {
+  color: white; 
+}
+.dark-mode .bx.bx-moon.dark-mode-toggle {
+  color: white; /* Altere a cor para branco */
+}
+
+.dark-mode-ativo #facts i {
+  color: white;
+}
+
+.skills {
+  background-color: #f5f8fd; 
+  color: #050d18; 
+}
+
+.dark-mode .skills {
+  background-color: #161616; 
+  color: #ffffff; 
+}
+
+.testimonials {
+  background-color: #f5f8fd; 
+  color: #050d18; 
+}
+
+.dark-mode .skills .progress .skill {
+  color: white;
+}
+.testimonials h5 {
+  font-size: 16px; 
+}
+.dark-mode .testimonials h5 {
+  color: #ffffff; 
+}
+.dark-mode .testimonials {
+  background-color: #161616; 
+  
+}
+.dark-mode #servicos h2{
+  color: white; 
+}
+.dark-mode .testimonials .testimonial-item h3 {
+  color: white;
+}
+.dark-mode .testimonials .testimonial-item h4 {
+  color: white;
+}
+.dark-mode .custom-text {
+  color: white;
+}
+
+.dark-mode .resume .resume-title {
+  color: white;
+}
+
+.dark-mode .resume .resume-item h4 {
+  color: white;
+}
+
+.dark-mode .facts .count-box p {
+  color: white;
+}
+.dark-mode .facts .count-box span {
+  color: white;
+}
+.dark-mode #servicos i {
+  color: black; 
+}
+/*----------------------
+# Fim DarkMode
+----------------------*/
 .portfolio-details .portfolio-details-container {
   position: relative;
 }
@@ -993,7 +925,7 @@ section {
   right: 0;
   bottom: -70px;
   background: #fff;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 15px rgba(206, 14, 14, 0.1);
   z-index: 2;
 }
 
