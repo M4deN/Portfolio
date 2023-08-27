@@ -20,7 +20,6 @@ O projeto está organizado da seguinte forma:
   - `jquery/`: Biblioteca JavaScript para manipulação do DOM.
   - `jquery.easing/`: Biblioteca para adicionar efeitos de easing.
   - `owl.carousel/`: Plugin de carrossel responsivo.
-  - `php-email-form/`: Formulário de contato em PHP.
   - `typed.js/`: Plugin para animação de texto digitado.
   - `venobox/`: Plugin para lightbox de imagens e vídeos.
   - `waypoints/`: Biblioteca para detectar a rolagem do usuário.
