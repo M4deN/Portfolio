@@ -12,7 +12,7 @@ a:hover {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,h2,h3,h4,h5,h6 {
   font-family: "Raleway", sans-serif;
 }
 
@@ -80,7 +80,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
 }
 
-#header .profile h1 a, #header .profile h1 a:hover {
+#header .profile h1 a,
+#header .profile h1 a:hover {
   color: #fff;
   text-decoration: none;
 }
@@ -114,6 +115,7 @@ h1, h2, h3, h4, h5, h6 {
   #header {
     left: -300px;
   }
+
   #main {
     margin-left: 0;
   }
@@ -133,7 +135,7 @@ h1, h2, h3, h4, h5, h6 {
   list-style: none;
 }
 
-.nav-menu > ul > li {
+.nav-menu>ul>li {
   position: relative;
   white-space: nowrap;
 }
@@ -154,12 +156,16 @@ h1, h2, h3, h4, h5, h6 {
   color: #6f7180;
 }
 
-.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+.nav-menu a:hover,
+.nav-menu .active>a,
+.nav-menu li:hover>a {
   text-decoration: none;
   color: #fff;
 }
 
-.nav-menu a:hover i, .nav-menu .active > a i, .nav-menu li:hover > a i {
+.nav-menu a:hover i,
+.nav-menu .active>a i,
+.nav-menu li:hover>a i {
   color: #149ddd;
 }
 
@@ -177,6 +183,19 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   cursor: pointer;
   text-align: right;
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  top: 45px;
+  right: 2px;
+  background-color: #161616;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 1000;
 }
 
 .mobile-nav-toggle i {
@@ -231,7 +250,7 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(255, 251, 251);
 }
 
-#hero p {  
+#hero p {
   color: #fff;
   margin-bottom: 50px;
   font-size: 26px;
@@ -256,6 +275,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 28px;
     line-height: 36px;
   }
+
   #hero h2 {
     font-size: 18px;
     line-height: 24px;
@@ -424,6 +444,7 @@ section {
   margin-bottom: 20px;
   color: #050d18;
 }
+
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
@@ -504,7 +525,8 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
   color: #149ddd;
 }
 
@@ -557,7 +579,7 @@ section {
   background: rgba(20, 157, 221, 0.95);
 }
 
-.portfolio .portfolio-wrap .portfolio-links a + a {
+.portfolio .portfolio-wrap .portfolio-links a+a {
   border-left: 1px solid #37b3ed;
 }
 
@@ -657,7 +679,8 @@ section {
   margin: 0;
 }
 
-.testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
+.testimonials .testimonial-item .quote-icon-left,
+.testimonials .testimonial-item .quote-icon-right {
   color: #000000;
   font-size: 26px;
 }
@@ -698,7 +721,8 @@ section {
   left: calc(50% - 20px);
 }
 
-.testimonials .owl-nav, .testimonials .owl-dots {
+.testimonials .owl-nav,
+.testimonials .owl-dots {
   margin-top: 5px;
   text-align: center;
 }
@@ -744,11 +768,11 @@ section {
   font-size: 15px;
 }
 
-.breadcrumbs ol li + li {
+.breadcrumbs ol li+li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li + li::before {
+.breadcrumbs ol li+li::before {
   display: inline-block;
   padding-right: 10px;
   color: #0e2442;
@@ -759,9 +783,11 @@ section {
   .breadcrumbs .d-flex {
     display: block !important;
   }
+
   .breadcrumbs ol {
     display: block;
   }
+
   .breadcrumbs ol li {
     display: inline-block;
   }
@@ -778,9 +804,10 @@ section {
 # DarkMode
 ----------------------*/
 .dark-mode {
-  background-color: #161616; 
-  color: #fff; 
+  background-color: #161616;
+  color: #fff;
 }
+
 .dark-mode-toggle:hover {
   animation: glow 1s infinite alternate;
 }
@@ -788,46 +815,40 @@ section {
 /* Animação glow para o efeito hover */
 @keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+    text-shadow: 0 0 10px #534e4e, 0 0 20px #534e4e, 0 0 30px #534e4e;
   }
+
   to {
-    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+    text-shadow: 0 0 10px #06cc06, 0 0 20px #06cc06, 0 0 30px #06cc06;
   }
 }
+
 .dark-mode .resume .resume-item h5 {
-  color: white; /* Cor do texto em modo escuro */
-  background: #363636; /* Cor de fundo em modo escuro */
-}
-.dark-mode-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: #161616;
   color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  background-color: transparent;
-  cursor: pointer;
-  z-index: 1000;
+  background: #363636;
 }
 
 .bx.bx-moon.dark-mode-toggle {
-  font-size: 28px; 
-  color: black;
+  font-size: 28px;
+  color: #149ddd;
 }
+
 .dark-mode .facts {
-  background-color: #161616; 
-  color: #ffffff; 
+  background-color: #161616;
+  color: #ffffff;
 }
+
 .dark-mode .cv-description {
   color: white;
 }
 
 .dark-mode-ativo #facts {
-  color: white; 
+  color: white;
 }
+
 .dark-mode .bx.bx-moon.dark-mode-toggle {
-  color: white; /* Altere a cor para branco */
+  color: white;
+  /* Altere a cor para branco */
 }
 
 .dark-mode-ativo #facts i {
@@ -835,42 +856,49 @@ section {
 }
 
 .skills {
-  background-color: #f5f8fd; 
-  color: #050d18; 
+  background-color: #f5f8fd;
+  color: #050d18;
 }
 
 .dark-mode .skills {
-  background-color: #161616; 
-  color: #ffffff; 
+  background-color: #161616;
+  color: #ffffff;
 }
 
 .testimonials {
-  background-color: #f5f8fd; 
-  color: #050d18; 
+  background-color: #f5f8fd;
+  color: #050d18;
 }
 
 .dark-mode .skills .progress .skill {
   color: white;
 }
+
 .testimonials h5 {
-  font-size: 16px; 
+  font-size: 16px;
 }
+
 .dark-mode .testimonials h5 {
-  color: #ffffff; 
+  color: #ffffff;
 }
+
 .dark-mode .testimonials {
-  background-color: #161616; 
-  
+  background-color: #161616;
+
 }
-.dark-mode #servicos h2{
-  color: white; 
+
+.dark-mode #servicos h2 {
+  color: white;
 }
+
 .dark-mode .testimonials .testimonial-item h3 {
   color: white;
 }
+
 .dark-mode .testimonials .testimonial-item h4 {
   color: white;
 }
+
 .dark-mode .custom-text {
   color: white;
 }
@@ -886,12 +914,15 @@ section {
 .dark-mode .facts .count-box p {
   color: white;
 }
+
 .dark-mode .facts .count-box span {
   color: white;
 }
+
 .dark-mode #servicos i {
-  color: black; 
+  color: black;
 }
+
 /*----------------------
 # Fim DarkMode
 ----------------------*/
@@ -904,7 +935,8 @@ section {
   z-index: 1;
 }
 
-.portfolio-details .portfolio-details-carousel .owl-nav, .portfolio-details .portfolio-details-carousel .owl-dots {
+.portfolio-details .portfolio-details-carousel .owl-nav,
+.portfolio-details .portfolio-details-carousel .owl-dots {
   margin-top: 5px;
   text-align: left;
 }
@@ -946,7 +978,7 @@ section {
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li + li {
+.portfolio-details .portfolio-info ul li+li {
   margin-top: 10px;
 }
 
@@ -969,6 +1001,7 @@ section {
   .portfolio-details .portfolio-description h2 {
     width: 100%;
   }
+
   .portfolio-details .portfolio-info {
     position: static;
     margin-top: 30px;
