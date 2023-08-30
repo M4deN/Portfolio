@@ -794,7 +794,10 @@ section {
     text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
   }
 }
-
+.dark-mode .resume .resume-item h5 {
+  color: white; /* Cor do texto em modo escuro */
+  background: #363636; /* Cor de fundo em modo escuro */
+}
 .dark-mode-toggle {
   position: fixed;
   top: 20px;
