@@ -188,7 +188,7 @@ h1,h2,h3,h4,h5,h6 {
 .dark-mode-toggle {
   position: fixed;
   top: 45px;
-  right: 2px;
+  right: 0%;
   background-color: #161616;
   color: #ffffff;
   border: none;
