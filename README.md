@@ -1,6 +1,6 @@
 # Projeto Web - Disciplina de Web 1
 
-Este é o projeto desenvolvido para a disciplina de Web 1 na UTFPR-CP. O projeto consiste em um website utilizando tecnologias web modernas.
+Este é o projeto desenvolvido para a disciplina de Web 1(front-end) na UTFPR-CP.
 
 ![Começo](https://github.com/AlexDeSaran/Portfolio/blob/main/assets/img/Capturar.PNG)
 
