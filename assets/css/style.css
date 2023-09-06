@@ -246,7 +246,6 @@ h1,h2,h3,h4,h5,h6 {
   background-size: cover;
 }
 
-
 #hero:before {
   content: "";
   background: rgba(5, 13, 24, 0.3);
@@ -354,6 +353,9 @@ section {
   color: #173b6c;
 }
 
+body.dark-mode .about .content h3 {
+  color: #fff; 
+}
 .about .content ul {
   list-style: none;
   padding: 0;
@@ -419,7 +421,6 @@ section {
   transition: ease-in-out 0.3s;
 }
 
-
 /*--------------------------
 # habilidades
 ---------------------------*/
@@ -464,7 +465,7 @@ section {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #050d18;
+  color: #173b6c;
 }
 
 .resume .resume-item {
@@ -718,6 +719,17 @@ section {
   right: -5px;
   position: relative;
   top: 10px;
+}
+
+:root {
+  --h2-text-color-dark: #fff; /
+}
+h2 {
+  color: var(--h2-text-color-light);
+}
+
+body.dark-mode h2 {
+  color: var(--h2-text-color-dark);
 }
 
 .testimonials .testimonial-item p {
