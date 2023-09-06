@@ -32,20 +32,42 @@ h1,h2,h3,h4,h5,h6 {
   transition: display 0.5s ease-in-out;
   z-index: 99999;
 }
-
 .back-to-top i {
   font-size: 24px;
   position: absolute;
   top: 7px;
   left: 8px;
 }
-
 .back-to-top:hover {
   color: #fff;
   background: #2eafec;
   transition: 0.2s ease-in-out;
 }
+/* Estilo para o contador de visitas */
+#contador-visitas {
+  position: fixed;
+  display: block; 
+  width: 90px;
+  height: 40px;
+  border-radius: 50px;
+  right: 65px; 
+  bottom: 15px;
+  background: #149ddd;
+  color: #fff;
+  text-align: center;
+  line-height: 40px; 
+  z-index: 99999;
+  transition: display 0.5s ease-in-out;
+}
 
+#contador-visitas i {
+  font-size: 24px;
+}
+
+#contador-visitas:hover {
+  background: #2eafec;
+  transition: 0.2s ease-in-out;
+}
 /*--------
 # Header
 ---------*/
