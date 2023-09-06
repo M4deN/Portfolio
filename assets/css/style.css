@@ -47,7 +47,7 @@ h1,h2,h3,h4,h5,h6 {
 #contador-visitas {
   position: fixed;
   display: block; 
-  width: 90px;
+  width: 65px;
   height: 40px;
   border-radius: 50px;
   right: 65px; 
