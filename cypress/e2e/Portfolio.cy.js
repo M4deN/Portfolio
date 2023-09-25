@@ -61,7 +61,7 @@ describe('Testes Portfolio', () => {
       cy.contains('Total Estrelas').should('exist')
     })
   })
-  it('Deve exibir as habilidades corretamente', () => {
+  it('Deve exibir as todas as habilidades', () => {
     cy.scrollTo(0, 2300)
 
     cy.contains('Node').should('exist')
@@ -83,4 +83,53 @@ describe('Testes Portfolio', () => {
     cy.contains('Appium').should('exist')
     cy.contains('MySQL').should('exist')
   })
+
+  it('Deve verificar as informações do currículo', () => {
+    cy.scrollTo(0, 3200)
+
+    cy.get('.resume-title').contains('Sumário').should('exist')
+    cy.get('.resume-title').contains('Educação').should('exist')
+    cy.get('.resume-title').contains('Experiência Profissional').should('exist')
+
+    // Verificar se a instituição de ensino para Engenharia de Software está correta
+    cy.get('.resume-item')
+      .contains('Universidade Tecnologica Federal do Paraná, Cornélio Procópio, PR')
+      .should('exist')
+
+    // Verificar se a experiência de Desenvolvimento Freelancer está listada corretamente
+    cy.get('.resume-item')
+      .contains('Desenvolvimento Freelancer')
+      .parent()
+      .contains('2016 - 2021')
+      .should('exist')
+
+    // Verificar se a experiência na Tata Consultancy Services está listada corretamente
+    cy.get('.resume-item')
+      .contains('Quality Assurance')
+      .parent()
+      .contains('2021 - Present')
+      .should('exist')
+  })
+
+  context('Testes para a seção de Projetos', () => {
+    it('Deve exibir o título "Projects" e conter um link para o GitHub', () => {
+      cy.get('.section-title h2').contains('Projects').should('be.visible')
+      cy.get('.section-title a').should('have.attr', 'href', 'https://github.com/M4deN')
+    })
+
+    it('Deve verificar os projetos existentes', () => {
+
+      cy.contains('Netflix').should('exist')
+      cy.contains('Streming & WEB').should('exist')
+      cy.contains('Calculadora').should('exist')
+      cy.contains('WEB').should('exist')
+      cy.contains('BOOK Express').should('exist')
+      cy.contains('WEB').should('exist')
+      cy.contains('Game Store').should('exist')
+      cy.contains('Locadora').should('exist')
+      cy.contains('Disney Plus').should('exist')
+      cy.contains('Streaming').should('exist')
+    })
+  })
+
 })
