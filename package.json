@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio desenvolvido para a disciplina de WEB 1",
+  "scripts": {
+    "lint": "eslint cypress/**/*.js && eslint cypress.config.js",
+    "lint:fix": "eslint cypress/**/*.js --fix && eslint cypress.config.js --fix",
+    "test": "cypress run --reporter nyan",
+    "cy:open": "cypress open"
+  },
+  "author": "Alecio L. Medeiros",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^12.15.0",
+    "eslint": "^8.43.0"
+  },
+  "dependencies": {
+    "eslint-plugin-cypress": "^2.13.3"
+  }
+}
