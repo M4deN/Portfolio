@@ -61,7 +61,7 @@ describe('Testes Portfolio', () => {
       cy.contains('Total Estrelas').should('exist')
     })
   })
-  it('Deve exibir as todas as habilidades', () => {
+  it('Deve exibir todas as habilidades', () => {
     cy.scrollTo(0, 2300)
 
     cy.contains('Node').should('exist')
@@ -132,4 +132,89 @@ describe('Testes Portfolio', () => {
     })
   })
 
+  context('Testes para a seção de Cursos e Certificações', () => {
+    it('Deve exibir o título "Cursos e Certificações"', () => {
+      cy.get('#cursos-certificacoes .section-title h2').contains('Cursos e Certificações').should('be.visible')
+    })
+
+    it('Deve verificar a existência de pelo menos um curso', () => {
+      cy.get('.curso-item').should('have.length.greaterThan', 0)
+    })
+
+    it('Deve verificar se todos os cursos têm um título e data de conclusão', () => {
+      cy.get('.curso-item').each((curso) => {
+        const titulo = curso.find('h3').text()
+        const data = curso.find('p').text()
+
+        expect(titulo).to.not.be.empty
+        expect(data).to.not.be.empty
+      })
+    })
+
+    it('Deve verificar se todos os links de certificados estão funcionando', () => {
+      cy.get('.curso-item a[target="_blank"]').each((link) => {
+        const href = link.attr('href')
+        cy.request(href).its('status').should('eq', 200)
+      })
+    })
+
+    it('Deve verificar se todos os links de certificados abrem em uma nova guia', () => {
+      cy.get('.curso-item a[target="_blank"]').each((link) => {
+        cy.wrap(link).invoke('attr', 'target').should('equal', '_blank')
+      })
+    })
+  })
+
+  context('Testes para a seção Curriculum Vitae & Contact', () => {
+    it('Deve verificar os links de download do CV', () => {
+      cy.get('a[href$="Curriculum_AlecioMedeirosEnglish.pdf"]').should('have.attr', 'href', 'assets/pdf/Curriculum_AlecioMedeirosEnglish.pdf')
+      cy.get('a[href$="Curriculum_AlecioMedeiros.pdf"]').should('have.attr', 'href', 'assets/pdf/Curriculum_AlecioMedeiros.pdf')
+    })
+
+    it('Deve verificar o link de solicitação de contato', () => {
+      cy.get('a[href^="mailto:alexdesaran@outlook.com"]').should('have.attr', 'href', 'mailto:alexdesaran@outlook.com?subject=Solicitação de Contato&body=Olá, gostaria de solicitar o seu contato.')
+    })
+
+    it('Deve verificar se os botões de download e solicitação de contato estão visíveis', () => {
+      cy.get('.btn.btn-primary').should('be.visible')
+    })
+  })
+
+  it('Deve baixar o CV em inglês corretamente', () => {
+    cy.intercept({
+      method: 'GET',
+      url: '**/Curriculum_AlecioMedeirosEnglish.pdf',
+    }).as('downloadCVInglês')
+
+    cy.get('a[href$="Curriculum_AlecioMedeirosEnglish.pdf"]').click()
+    cy.wait('@downloadCVInglês')
+    cy.readFile('cypress/downloads/Curriculum_AlecioMedeirosEnglish.pdf').should('exist')
+
+  })
+
+  it('Deve baixar o CV em português corretamente', () => {
+    cy.intercept({
+      method: 'GET',
+      url: '**/Curriculum_AlecioMedeiros.pdf',
+    }).as('downloadCVPt')
+
+    cy.get('a[href$="Curriculum_AlecioMedeiros.pdf"]').click()
+    cy.wait('@downloadCVPt')
+    cy.readFile('cypress/downloads/Curriculum_AlecioMedeiros.pdf').should('exist')
+  })
+
+  context('Validação Footer', () => {
+
+    it('Deve exibir o copyright corretamente', () => {
+      cy.scrollTo(0, 4700)
+      cy.get('#footer .copyright').should('exist').and('contain', '@M4deN')
+    })
+
+    it('Deve conter um link de créditos válido', () => {
+      cy.get('#footer .credits a')
+        .should('have.attr', 'href', 'http://linktr.ee/Alexdesaran/')
+        .and('have.attr', 'target', '_blank')
+        .and('contain.text', 'Alécio L. Medeiros')
+    })
+  })
 })
