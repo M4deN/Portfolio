@@ -31,9 +31,10 @@ O projeto está organizado da seguinte forma:
 
 ___
 
-## Testes Automatizados
+### Testes Automatizados
 
-![Testes](https://github.com/M4deN/Portfolio/assets/43422425/2c4a0e79-ddbc-46e3-8879-28667fe2a380)
+
+[![Testes Automatizados](https://github.com/M4deN/Portfolio/assets/43422425/e13395e9-8c3a-4f30-8463-559ff551895e)](https://github.com/M4deN/Portfolio/assets/43422425/e13395e9-8c3a-4f30-8463-559ff551895e)
 
 
 ___
