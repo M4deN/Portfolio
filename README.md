@@ -4,6 +4,8 @@ Este é o projeto desenvolvido para a disciplina de Web 1(front-end) na UTFPR-CP
 
 ![Começo](https://github.com/AlexDeSaran/Portfolio/blob/main/assets/img/Capturar.PNG)
 
+___
+
 ## Estrutura do Projeto
 
 O projeto está organizado da seguinte forma:
@@ -27,12 +29,13 @@ O projeto está organizado da seguinte forma:
 - `js/`: Pasta contendo os arquivos JavaScript do projeto.
 - `fonts/`: Pasta contendo as fontes utilizadas no projeto.
 
-## Executando o Projeto
+___
 
-Para executar o projeto localmente, siga as etapas abaixo:
+## Testes Automatizados
 
-1. Clone este repositório em sua máquina local.
-2. Abra o arquivo `index.html` em seu navegador web.
+https://github.com/M4deN/Portfolio/assets/43422425/2c4a0e79-ddbc-46e3-8879-28667fe2a380
+
+___
 
 ## Licença
 
