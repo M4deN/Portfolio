@@ -862,9 +862,15 @@ body.dark-mode h2 {
   background: #363636;
 }
 
+
 .bx.bx-moon.dark-mode-toggle {
   font-size: 28px;
   color: #149ddd;
+}
+
+.bx.bx-sun.dark-mode-toggle {
+  font-size: 30px;
+  color: #149ddd; /* Cor para o ícone do sol */
 }
 
 .dark-mode .facts {
@@ -878,11 +884,6 @@ body.dark-mode h2 {
 
 .dark-mode-ativo #facts {
   color: white;
-}
-
-.dark-mode .bx.bx-moon.dark-mode-toggle {
-  color: white;
-  /* Altere a cor para branco */
 }
 
 .dark-mode-ativo #facts i {
