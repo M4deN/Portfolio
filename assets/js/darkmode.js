@@ -11,37 +11,36 @@ function disableDarkMode() {
 }
 
 // Verificar o estado atual do modo escuro no carregamento da página
-const storedDarkMode = localStorage.getItem('darkMode');
+document.addEventListener('DOMContentLoaded', function() {
+  const storedDarkMode = localStorage.getItem('darkMode');
 
-if (storedDarkMode === 'enabled') {
-  enableDarkMode();
-} else {
-  disableDarkMode();
-}
+  if (storedDarkMode === 'enabled') {
+    enableDarkMode();
+    document.getElementById('dark-mode-toggle').classList.add('bx-sun');
+  } else {
+    disableDarkMode();
+    document.getElementById('dark-mode-toggle').classList.add('bx-moon');
+  }
+});
 
 // Adicione um evento para detectar a mudança de modo claro/escuro
-document.addEventListener('DOMContentLoaded', function() {
-  const darkModeToggle = document.getElementById('dark-mode-toggle');
+document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+  const body = document.body;
+  
+  const darkModeEnabled = body.classList.contains('dark-mode');
 
-  // Adicione um ouvinte de eventos para o clique no ícone
-  darkModeToggle.addEventListener('click', function() {
-    const body = document.body;
-    
-    const darkModeEnabled = body.classList.contains('dark-mode');
-  
-    if (!darkModeEnabled) {
-      darkModeToggle.classList.remove('bx-moon');
-      darkModeToggle.classList.add('bx-sun');
-    } else {
-      darkModeToggle.classList.remove('bx-sun');
-      darkModeToggle.classList.add('bx-moon');
-    }
-  
-    // Após mudar a classe, verifique novamente o modo escuro
-    if (darkModeEnabled) {
-      disableDarkMode();
-    } else {
-      enableDarkMode();
-    }
-  })
+  if (!darkModeEnabled) {
+    this.classList.remove('bx-moon');
+    this.classList.add('bx-sun');
+  } else {
+    this.classList.remove('bx-sun');
+    this.classList.add('bx-moon');
+  }
+
+  // Após mudar a classe, verifique novamente o modo escuro
+  if (darkModeEnabled) {
+    disableDarkMode();
+  } else {
+    enableDarkMode();
+  }
 });
