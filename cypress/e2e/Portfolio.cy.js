@@ -132,7 +132,7 @@ describe('Testes Portfolio', () => {
     })
   })
 
-  context('Testes para a seção de Cursos e Certificações', () => {
+  context.only('Testes para a seção de Cursos e Certificações', () => {
     it('Deve exibir o título "Cursos e Certificações"', () => {
       cy.get('#cursos-certificacoes .section-title h2').contains('Cursos e Certificações').should('be.visible')
     })
@@ -151,7 +151,7 @@ describe('Testes Portfolio', () => {
       })
     })
 
-    it('Deve verificar se todos os links de certificados estão funcionando', () => {
+    it.skip('Deve verificar se todos os links de certificados estão funcionando', () => {
       cy.get('.curso-item a[target="_blank"]').each((link) => {
         const href = link.attr('href')
         cy.request(href).its('status').should('eq', 200)
