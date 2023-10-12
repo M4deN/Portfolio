@@ -4,6 +4,7 @@ Este é o projeto desenvolvido para a disciplina de Web 1(front-end) na UTFPR-CP
 
 ![Começo](https://github.com/AlexDeSaran/Portfolio/blob/main/assets/img/Capturar.PNG)
 
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/M4deN/Portfolio/ci.yml?label=Test%20Workflows&logo=GitHub&style=for-the-badge)
 ___
 
 ## Estrutura do Projeto
