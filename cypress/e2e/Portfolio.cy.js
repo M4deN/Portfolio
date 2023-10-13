@@ -132,7 +132,7 @@ describe('Testes Portfolio', () => {
     })
   })
 
-  context.only('Testes para a seção de Cursos e Certificações', () => {
+  context('Testes para a seção de Cursos e Certificações', () => {
     it('Deve exibir o título "Cursos e Certificações"', () => {
       cy.get('#cursos-certificacoes .section-title h2').contains('Cursos e Certificações').should('be.visible')
     })
