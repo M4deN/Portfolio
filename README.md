@@ -34,9 +34,7 @@ ___
 
 ### Testes Automatizados
 
-
 [![Testes Automatizados](https://github.com/M4deN/Portfolio/assets/43422425/e13395e9-8c3a-4f30-8463-559ff551895e)](https://github.com/M4deN/Portfolio/assets/43422425/e13395e9-8c3a-4f30-8463-559ff551895e)
-
 
 ___
 

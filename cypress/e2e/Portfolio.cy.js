@@ -1,6 +1,7 @@
 describe('Testes Portfolio', () => {
   beforeEach(() => {
-    cy.visit('https://m4den.github.io/Portfolio/')
+    cy.viewport(1080, 1000)
+    cy.visit('/')
   })
 
   it('Deve exibir a seção "About"', () => {
@@ -28,7 +29,7 @@ describe('Testes Portfolio', () => {
     cy.scrollTo(0, 700)
     cy.get('.col-lg-6').eq(1).within(() => {
       cy.contains('Repositorio: https://github.com/M4deN').should('exist')
-      cy.contains('Email: alexdesaran@outlook.com').should('exist')
+      cy.contains('Email: Madenxx@outlook.com').should('exist')
       cy.contains('Quality Assurance: Tata Consultancy Services').should('exist')
     })
   })
@@ -39,13 +40,13 @@ describe('Testes Portfolio', () => {
   it('Deve exibir as estatísticas corretamente', () => {
     // Verifica o total de commits
     cy.get('.count-box').eq(0).within(() => {
-      cy.get('span[data-toggle="counter-up"]').should('have.text', '2.813')
+      cy.get('span[data-toggle="counter-up"]').should('have.text', '2.967')
       cy.contains('Total Commits').should('exist')
     })
 
     // Verifica o total de repositórios
     cy.get('.count-box').eq(1).within(() => {
-      cy.get('span[data-toggle="counter-up"]').should('have.text', '42')
+      cy.get('span[data-toggle="counter-up"]').should('have.text', '49')
       cy.contains('Repositórios').should('exist')
     })
 
@@ -57,7 +58,7 @@ describe('Testes Portfolio', () => {
 
     // Verifica o total de estrelas
     cy.get('.count-box').eq(3).within(() => {
-      cy.get('span[data-toggle="counter-up"]').should('have.text', '57')
+      cy.get('span[data-toggle="counter-up"]').should('have.text', '60')
       cy.contains('Total Estrelas').should('exist')
     })
   })
@@ -77,7 +78,7 @@ describe('Testes Portfolio', () => {
     cy.contains('Java').should('exist')
     cy.contains('Robot Framework').should('exist')
     cy.contains('Mockito').should('exist')
-    cy.contains('.NET').should('exist')
+    cy.contains('CI/CD').should('exist')
     cy.contains('JUnit5').should('exist')
     cy.contains('Postman').should('exist')
     cy.contains('Appium').should('exist')
@@ -113,9 +114,11 @@ describe('Testes Portfolio', () => {
 
   context('Testes para a seção de Projetos', () => {
     it('Deve exibir o título "Projects" e conter um link para o GitHub', () => {
-      cy.get('.section-title h2').contains('Projects').should('be.visible')
-      cy.get('.section-title a').should('have.attr', 'href', 'https://github.com/M4deN')
+      cy.contains('h5', 'Nesta seção estaram alguns dos projetos').should('be.visible')
+      cy.get('a[href="https://docs.github.com/pt/actions"]').should('exist')
+      cy.get('a[href="https://github.com/M4deN"]').should('exist')
     })
+
 
     it('Deve verificar os projetos existentes', () => {
 
@@ -151,12 +154,17 @@ describe('Testes Portfolio', () => {
       })
     })
 
-    it.skip('Deve verificar se todos os links de certificados estão funcionando', () => {
+    it('Deve verificar se todos os links de certificados estão funcionando', () => {
       cy.get('.curso-item a[target="_blank"]').each((link) => {
-        const href = link.attr('href')
-        cy.request(href).its('status').should('eq', 200)
+        const certificateName = link.text()
+        cy.log(`Verificando o status do certificado: ${certificateName}`)
+        cy.request({
+          url: link.attr('href'),
+          failOnStatusCode: false
+        }).its('status').should('eq', 200)
       })
     })
+
 
     it('Deve verificar se todos os links de certificados abrem em uma nova guia', () => {
       cy.get('.curso-item a[target="_blank"]').each((link) => {
@@ -172,7 +180,7 @@ describe('Testes Portfolio', () => {
     })
 
     it('Deve verificar o link de solicitação de contato', () => {
-      cy.get('a[href^="mailto:alexdesaran@outlook.com"]').should('have.attr', 'href', 'mailto:alexdesaran@outlook.com?subject=Solicitação de Contato&body=Olá, gostaria de solicitar o seu contato.')
+      cy.get('.btn.btn-primary[href^="mailto:madenxx@outlook.com"]').should('have.attr', 'href', 'mailto:madenxx@outlook.com?subject=Solicitação de Contato&body=Olá, gostaria de solicitar o seu contato.')
     })
 
     it('Deve verificar se os botões de download e solicitação de contato estão visíveis', () => {
