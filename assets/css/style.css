@@ -13,7 +13,7 @@ a:hover {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif !important;
 }
 
 /*------------------
@@ -679,13 +679,13 @@ body.dark-mode .about .content h3 {
 .testimonials .testimonial-item {
   box-sizing: content-box;
   text-align: center;
-  min-height: 320px;
+  min-height: 95%;
 }
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 300px;
+  width: 95%;
   border-radius: 0%;
-  border-width: 40%;
+  border-width: 10%;
   margin: 0 auto;
 }
 
