@@ -1,10 +1,10 @@
-# Projeto Web - Disciplina de Web 1 [![Netlify Status](https://api.netlify.com/api/v1/badges/b62c764a-da0a-4199-bc01-e8d2fdf5e978/deploy-status)](https://app.netlify.com/sites/portfoliomee/deploys)
+# Projeto Web - Disciplina de Web 1 [![Netlify Status](https://api.netlify.com/api/v1/badges/b62c764a-da0a-4199-bc01-e8d2fdf5e978/deploy-status)](https://app.netlify.com/sites/portfolioyz/deploys)
 
 Este é o projeto desenvolvido para a disciplina de Web 1(front-end) na UTFPR-CP.
 
-![Começo](https://github.com/AlexDeSaran/Portfolio/blob/main/assets/img/Capturar.PNG)
-
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/M4deN/Portfolio/ci.yml?label=Test%20Workflows&logo=GitHub&style=for-the-badge)
+
+![Começo](https://github.com/AlexDeSaran/Portfolio/blob/main/assets/img/Capturar.PNG)
 ___
 
 ## Estrutura do Projeto
