@@ -16,6 +16,7 @@ h1,h2,h3,h4,h5,h6 {
   font-family: "Raleway", sans-serif !important;
 }
 
+
 /*------------------
 # botão voltar ao topo
 -------------------*/
@@ -518,107 +519,6 @@ body.dark-mode .about .content h3 {
   border: 2px solid #1f5297;
 }
 
-/*-------------------------
-# Portfolio
--------------------------*/
-.portfolio .portfolio-item {
-  margin-bottom: 30px;
-}
-
-.portfolio #portfolio-flters {
-  padding: 0;
-  margin: 0 auto 35px auto;
-  list-style: none;
-  text-align: center;
-  background: #fff;
-  border-radius: 50px;
-  padding: 2px 15px;
-}
-
-.portfolio #portfolio-flters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 10px 15px 8px 15px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1;
-  text-transform: uppercase;
-  color: #272829;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-.portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active {
-  color: #149ddd;
-}
-
-.portfolio #portfolio-flters li:last-child {
-  margin-right: 0;
-}
-
-.portfolio .portfolio-wrap {
-  transition: 0.3s;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.portfolio .portfolio-wrap::before {
-  content: "";
-  background: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  transition: all ease-in-out 0.3s;
-  z-index: 2;
-  opacity: 0;
-}
-
-.portfolio .portfolio-wrap .portfolio-links {
-  opacity: 1;
-  left: 0;
-  right: 0;
-  bottom: -60px;
-  z-index: 3;
-  position: absolute;
-  transition: all ease-in-out 0.3s;
-  display: flex;
-  justify-content: center;
-}
-
-.portfolio .portfolio-wrap .portfolio-links a {
-  color: #fff;
-  font-size: 28px;
-  text-align: center;
-  background: rgba(20, 157, 221, 0.75);
-  transition: 0.3s;
-  width: 50%;
-}
-
-.portfolio .portfolio-wrap .portfolio-links a:hover {
-  background: rgba(20, 157, 221, 0.95);
-}
-
-.portfolio .portfolio-wrap .portfolio-links a+a {
-  border-left: 1px solid #37b3ed;
-}
-
-.portfolio .portfolio-wrap:hover::before {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 1;
-}
-
-.portfolio .portfolio-wrap:hover .portfolio-links {
-  opacity: 1;
-  bottom: 0;
-}
-
 /*--------------------
 # Serviços
 ---------------------*/
@@ -729,7 +629,7 @@ h2 {
 }
 
 body.dark-mode h2 {
-  color: var(--h2-text-color-dark);
+  color: #255caa;
 }
 
 .testimonials .testimonial-item p {
@@ -833,6 +733,37 @@ body.dark-mode h2 {
 .portfolio-details {
   padding-top: 40px;
 }
+/* Estilos padrão (modo claro) */
+.portfolio.section-bg {
+  background-color: #fff; 
+  color: #000; 
+}
+
+/* Estilos para o modo escuro */
+body.dark-mode .portfolio.section-bg {
+  background-color: #161616; 
+  color: #fff; 
+}
+
+body:not(.dark-mode) .col-lg-12.d-flex.justify-content-center ul#portfolio-flters {
+  background-color: #000; 
+  color: #fff; 
+}
+
+body.dark-mode .col-lg-12.d-flex.justify-content-center ul#portfolio-flters li {
+  color: #000000;
+}
+body.dark-mode .col-lg-12.d-flex.justify-content-center ul#portfolio-flters li.filter-active {
+  color: #007bff; 
+}
+
+body:not(.dark-mode) .col-lg-12.d-flex.justify-content-center ul#portfolio-flters li {
+  color: #fff; 
+}
+
+body:not(.dark-mode) .col-lg-12.d-flex.justify-content-center ul#portfolio-flters li.filter-active {
+  color: #007bff; 
+}
 
 /*----------------------
 # DarkMode
@@ -845,7 +776,6 @@ body.dark-mode h2 {
 .dark-mode-toggle:hover {
   animation: glow 1s infinite alternate;
 }
-
 /* Animação glow para o efeito hover */
 @keyframes glow {
   from {
@@ -870,7 +800,7 @@ body.dark-mode h2 {
 
 .bx.bx-sun.dark-mode-toggle {
   font-size: 30px;
-  color: #149ddd; /* Cor para o ícone do sol */
+  color: #149ddd; 
 }
 
 .dark-mode .facts {
@@ -912,6 +842,11 @@ body.dark-mode h2 {
 .testimonials h5 {
   font-size: 16px;
 }
+/* Estilos para o modo escuro */
+body.dark-mode hr {
+  background-color: #636363; /* Cor da linha no modo escuro */
+  opacity: 0.5; /* Opacidade da linha no modo escuro (opcional) */
+}
 
 .dark-mode .testimonials h5 {
   color: #ffffff;
@@ -922,9 +857,6 @@ body.dark-mode h2 {
 
 }
 
-.dark-mode #servicos h2 {
-  color: white;
-}
 
 .dark-mode .testimonials .testimonial-item h3 {
   color: white;
