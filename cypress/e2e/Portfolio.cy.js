@@ -10,9 +10,9 @@ describe('Testes Portfolio', () => {
 
   it('Deve exibir informações sobre o perfil', () => {
     cy.get('.section-title h2').should('contain.text', 'About')
-    cy.get('.section-title p').should('contain.text', 'Software Engineer')
+    cy.get('.section-title p').should('contain.text', 'Engenheiro de Software em Formação')
     cy.get('.content h3').should('contain.text', 'Software Engineering & Quality Assurance')
-    cy.get('.content p').should('contain.text', 'Atualmente estudante de Engenharia de Software')
+    cy.get('.content p').should('contain.text', 'Atualmente cursando Engenharia de Software')
   })
 
   it('Deve conter links de redes sociais', () => {
@@ -41,25 +41,25 @@ describe('Testes Portfolio', () => {
     // Verifica o total de commits
     cy.get('.count-box').eq(0).within(() => {
       cy.get('span[data-toggle="counter-up"]').should('have.text', '2.967')
-      cy.contains('Total Commits').should('exist')
+      cy.contains('Commits').should('exist')
     })
 
     // Verifica o total de repositórios
     cy.get('.count-box').eq(1).within(() => {
       cy.get('span[data-toggle="counter-up"]').should('have.text', '49')
-      cy.contains('Repositórios').should('exist')
+      cy.contains('Projetos').should('exist')
     })
 
     // Verifica o total de linguagens utilizadas
     cy.get('.count-box').eq(2).within(() => {
-      cy.get('span[data-toggle="counter-up"]').should('have.text', '12')
-      cy.contains('Linguagens Utilizadas').should('exist')
+      cy.get('span[data-toggle="counter-up"]').should('have.text', '50')
+      cy.contains('Certificações').should('exist')
     })
 
     // Verifica o total de estrelas
     cy.get('.count-box').eq(3).within(() => {
-      cy.get('span[data-toggle="counter-up"]').should('have.text', '60')
-      cy.contains('Total Estrelas').should('exist')
+      cy.get('span[data-toggle="counter-up"]').should('have.text', '106')
+      cy.contains('Followers').should('exist')
     })
   })
   it('Deve exibir todas as habilidades', () => {
@@ -101,7 +101,7 @@ describe('Testes Portfolio', () => {
     cy.get('.resume-item')
       .contains('Desenvolvimento Freelancer')
       .parent()
-      .contains('2016 - 2021')
+      .contains('2017 - 2021')
       .should('exist')
 
     // Verificar se a experiência na Tata Consultancy Services está listada corretamente
@@ -118,7 +118,6 @@ describe('Testes Portfolio', () => {
       cy.get('a[href="https://docs.github.com/pt/actions"]').should('exist')
       cy.get('a[href="https://github.com/M4deN"]').should('exist')
     })
-
 
     it('Deve verificar os projetos existentes', () => {
 
@@ -137,7 +136,7 @@ describe('Testes Portfolio', () => {
 
   context('Testes para a seção de Cursos e Certificações', () => {
     it('Deve exibir o título "Cursos e Certificações"', () => {
-      cy.get('#cursos-certificacoes .section-title h2').contains('Cursos e Certificações').should('be.visible')
+      cy.get('#cursos-certificacoes .section-title h2').contains('Courses And Certifications').should('be.visible')
     })
 
     it('Deve verificar a existência de pelo menos um curso', () => {
