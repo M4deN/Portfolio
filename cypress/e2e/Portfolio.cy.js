@@ -10,10 +10,11 @@ describe('Testes Portfolio', () => {
 
   it('Deve exibir informações sobre o perfil', () => {
     cy.get('.section-title h2').should('contain.text', 'About')
-    cy.get('.section-title p').should('contain.text', 'Engenheiro de Software em Formação')
-    cy.get('.content h3').should('contain.text', 'Software Engineering & Quality Assurance')
-    cy.get('.content p').should('contain.text', 'Atualmente cursando Engenharia de Software')
+    cy.get('.section-title p').should('contain.text', 'GitHub Stats possui informações relevantes sobre o status atual')
+    cy.get('.content h3').should('contain.text', 'Analista de Testes & Quality Assurance')
+    cy.get('.content p').should('contain.text', 'Atualmente cursando um mestrado em computação aplicada')
   })
+
 
   it('Deve conter links de redes sociais', () => {
     cy.get('.social-links').should('exist')

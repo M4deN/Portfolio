@@ -11,7 +11,7 @@
   "author": "Alecio L. Medeiros",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^12.15.0",
+    "cypress": "^12.17.4",
     "eslint": "^8.43.0"
   },
   "dependencies": {
