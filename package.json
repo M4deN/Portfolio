@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "cypress-downloadfile": "^1.2.3",
-    "eslint-plugin-cypress": "^2.13.3"
+    "eslint-plugin-cypress": "^2.13.3",
+    "portfolio": "file:"
   }
 }
