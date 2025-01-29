@@ -26,6 +26,10 @@ jobs:
   cypress-tests-desktop:
     needs: eslint
     runs-on: ubuntu-22.04
+    strategy:
+      fail-fast: false
+      matrix:
+        containers: [1, 2, 3, 4]
     steps:
       - name: Checkout
         uses: actions/checkout@v2

@@ -9,8 +9,8 @@ describe('Testes Portfolio', () => {
   })
 
   it('Deve exibir informações sobre o perfil', () => {
-    cy.get('.section-title h2').should('contain.text', 'About')
-    cy.get('.content h3').should('contain.text', 'Analista de Testes & Quality Assurance')
+    cy.get('.section-title h2').should('contain.text', 'Sobre')
+    cy.get('.content h3').should('contain.text', 'Analista de Testes & Analista de Qualidade')
     cy.get('.content p').should('contain.text', 'Atualmente cursando um mestrado em computação aplicada')
   })
 
@@ -20,7 +20,8 @@ describe('Testes Portfolio', () => {
     cy.get('.social-links a').should('have.length', 5)
   })
 
-  it.skip('Deve exibir todas as informações corretamente Section About', () => {
+  //Teste de uma seção que atualmente está comentada do código
+  it.skip('Deve exibir todas as informações corretamente Section Sobre', () => {
     cy.get('.col-lg-6').eq(0).within(() => {
       cy.contains('Instituição: Universidade Tecnologica Federal do Paraná').should('exist')
       cy.contains('LinkedIn: in/madenx/').should('exist')
@@ -37,6 +38,7 @@ describe('Testes Portfolio', () => {
     cy.get('#dark-mode-toggle').should('be.visible')
   })
 
+  //Teste de uma seção que atualmente está comentada do código
   it.skip('Deve exibir as estatísticas corretamente', () => {
     // Verifica o total de commits
     cy.get('.count-box').eq(0).within(() => {
@@ -85,6 +87,7 @@ describe('Testes Portfolio', () => {
     cy.contains('MySQL').should('exist')
   })
 
+  //Teste de uma seção que atualmente está comentada do código
   it.skip('Deve verificar as informações do currículo', () => {
     cy.scrollTo(0, 3200)
 
@@ -100,14 +103,14 @@ describe('Testes Portfolio', () => {
       .contains('2017 - 2021')
       .should('exist')
     cy.get('.resume-item')
-      .contains('Quality Assurance')
+      .contains('Analista de Qualidade')
       .parent()
       .contains('2021 - Present')
       .should('exist')
   })
 
   context('Testes para a seção de Projetos', () => {
-    it('Deve exibir o título "Projects" e conter um link para o GitHub', () => {
+    it('Deve exibir o título "Projetos" e conter um link para o GitHub', () => {
       cy.contains('h5', 'Nesta seção estaram alguns dos projetos').should('be.visible')
       cy.get('a[href="https://docs.github.com/pt/actions"]').should('exist')
       cy.get('a[href="https://github.com/M4deN"]').should('exist')
@@ -130,7 +133,7 @@ describe('Testes Portfolio', () => {
 
   context('Testes para a seção de Cursos e Certificações', () => {
     it('Deve exibir o título "Cursos e Certificações"', () => {
-      cy.get('#cursos-certificacoes .section-title h2').contains('Courses And Certifications').should('be.visible')
+      cy.get('#cursos-certificacoes .section-title h2').contains('Cursos & Certificações').should('be.visible')
     })
 
     it('Deve verificar a existência de pelo menos um curso', () => {
